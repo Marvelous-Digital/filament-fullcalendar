@@ -3,6 +3,7 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import listPlugin from "@fullcalendar/list";
 import resourceTimelinePlugin from "@fullcalendar/resource-timeline";
+import resourceTimeGridPlugin from "@fullcalendar/resource-timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import momentPlugin from "@fullcalendar/moment";
 import momentTimezonePlugin from "@fullcalendar/moment-timezone";
@@ -38,6 +39,7 @@ export default (Alpine) => {
                             timeGridPlugin,
                             listPlugin,
                             resourceTimelinePlugin,
+                            resourceTimeGridPlugin,
                             interactionPlugin,
                             momentPlugin,
                             momentTimezonePlugin,
