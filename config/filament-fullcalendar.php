@@ -14,7 +14,31 @@ return [
     'headerToolbar' => [
         'left' => 'prev,next today',
         'center' => 'title',
-        'right' => 'dayGridMonth,dayGridWeek,dayGridDay',
+        'right' => 'timelineView, resourceView, dayGridMonth,dayGridWeek,dayGridDay',
+    ],
+
+    'views' => [
+        'timelineView' => [
+            'type' => 'resourceTimeline',
+            'duration' => ['month' => 1],
+            'buttonText' => 'Timeline',
+        ],
+        'resourceView' => [
+            'type' => 'resourceTimeGrid',
+            'duration' => ['day' => 1],
+            'buttonText' => 'Resources',
+        ],
+    ],
+
+    'resources' => [
+        [
+            'id' => 1,
+            'title' => 'resource 1'
+        ],
+        [
+            'id' => 2,
+            'title' => 'resource 2'
+        ]
     ],
 
     'navLinks' => true,

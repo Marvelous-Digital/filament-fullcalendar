@@ -25,18 +25,28 @@
 
 # Table of contents
 
+- [The Most Popular JavaScript Calendar as a Filament Widget 💛](#the-most-popular-javascript-calendar-as-a-filament-widget-)
+- [Features](#features)
+  - [Support Filament](#support-filament)
+- [Table of contents](#table-of-contents)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Styling](#styling)
 - [Listening for events](#listening-for-events)
 - [Creating and Editing events with modals.](#creating-and-editing-events-with-modals)
-  * [Creating Events](#creating-events)
-  * [Editing Events](#editing-events)
-  * [Authorizing actions](#authorizing-actions)
-  * [Listening for cancelled modal](#listening-for-cancelled-modal)
+  - [Creating Events](#creating-events)
+  - [Editing Events](#editing-events)
+  - [Authorizing actions](#authorizing-actions)
+  - [Listening for cancelled modal](#listening-for-cancelled-modal)
 - [Refreshing calendar events](#refreshing-calendar-events)
 - [Filtering events based on the calendar view](#filtering-events-based-on-the-calendar-view)
+  - [Testing](#testing)
+  - [Changelog](#changelog)
+  - [Contributing](#contributing)
+  - [Security Vulnerabilities](#security-vulnerabilities)
+  - [Credits](#credits)
+  - [License](#license)
 
 <br>
 
@@ -95,7 +105,8 @@ class CalendarWidget extends FullCalendarWidget
             [
                 'id' => 1,
                 'title' => 'Breakfast!',
-                'start' => now()
+                'start' => now(),
+                'resourceId' => 1
             ],
             [
                 'id' => 2,
@@ -103,6 +114,7 @@ class CalendarWidget extends FullCalendarWidget
                 'start' => now()->addDay(),
                 'url' => 'https://some-url.com',
                 'shouldOpenInNewTab' => true,
+                'resourceId' => 1
             ]
         ];
     }
