@@ -47,7 +47,15 @@ export default (Alpine) => {
                         eventResize: handleEventResizeUsing,
                         dateClick: handleDateClickUsing,
                         select: handleSelectUsing,
-                        eventContent,
+                        eventContent: (arg) => {
+                            let div = document.createElement('div');
+                            div.classList.add('event-content');
+
+                            let html = `<div>AAAAA</div>`;
+                            div.innerHTML = html;
+                            let arrayOfDomNodes = [div];
+                            return { domNodes: arrayOfDomNodes };
+                        },
                         eventSources: [
                             { events },
                             fetchEventsUsing
