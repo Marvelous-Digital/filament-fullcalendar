@@ -17,6 +17,7 @@ export default (Alpine) => {
             config,
             locale,
             events,
+            resources,
             initialView,
             initialDate,
             shouldSaveState,
@@ -47,6 +48,7 @@ export default (Alpine) => {
                             { events },
                             fetchEventsUsing
                         ],
+                        resources,
                         ...shouldSaveState && {
                             initialView: localStorage.getItem('fullcalendar.view.' + key) ?? initialView ?? undefined,
                             initialDate: localStorage.getItem('fullcalendar.date.' + key) ?? initialDate ?? undefined,
