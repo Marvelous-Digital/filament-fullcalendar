@@ -19,7 +19,7 @@ export default (Alpine) => {
             locale,
             events,
             resources,
-            eventInnerHtml,
+            createEventHtml,
             initialView,
             initialDate,
             shouldSaveState,
@@ -47,7 +47,7 @@ export default (Alpine) => {
                         eventResize: handleEventResizeUsing,
                         dateClick: handleDateClickUsing,
                         select: handleSelectUsing,
-                        eventContent: { html: eventInnerHtml },
+                        eventContent: createEventHtml,
                         eventSources: [
                             { events },
                             fetchEventsUsing

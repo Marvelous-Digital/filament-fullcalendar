@@ -38,7 +38,6 @@ class FullCalendarWidget extends Widget implements HasForms
                 'events' => $this->getViewData(),
                 'resources' => $this->getResources(),
                 'instanceConfig' => $this->getInstanceConfig(),
-                'eventInnerHtml' => $this->getEventInnerHtml(),
             ]);
     }
 

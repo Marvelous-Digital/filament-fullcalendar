@@ -12,10 +12,12 @@
                 locale: '{{ $locale }}',
                 events: {{ json_encode($events) }},
                 resources: {{ json_encode($resources) }},
-                eventInnerHtml: '{{ $eventInnerHtml }}',
                 initialView: @js($this->config('initialView')),
                 initialDate: @js($this->config('initialDate')),
                 shouldSaveState: @js($this->config('saveState', false)),
+                createEventHtml: async ({event}) => {
+                    return '<div>new test</di>';
+                }
                 handleEventClickUsing: async ({ event, jsEvent }) => {
                     if( event.url ) {
                         jsEvent.preventDefault();
