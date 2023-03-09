@@ -19,7 +19,7 @@ export default (Alpine) => {
             locale,
             events,
             resources,
-            eventContent,
+            eventInnerHtml,
             initialView,
             initialDate,
             shouldSaveState,
@@ -47,15 +47,7 @@ export default (Alpine) => {
                         eventResize: handleEventResizeUsing,
                         dateClick: handleDateClickUsing,
                         select: handleSelectUsing,
-                        eventContent: (arg) => {
-                            let div = document.createElement('div');
-                            div.classList.add('event-content');
-
-                            let html = `<div>AAAAA</div>`;
-                            div.innerHTML = html;
-                            let arrayOfDomNodes = [div];
-                            return { domNodes: arrayOfDomNodes };
-                        },
+                        eventContent: (arg) => { html: eventInnerHtml },
                         eventSources: [
                             { events },
                             fetchEventsUsing
