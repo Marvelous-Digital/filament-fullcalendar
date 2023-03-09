@@ -8,6 +8,7 @@
             x-data="calendarComponent({
                 key: @js($this->getKey()),
                 config: {{ json_encode($this->getConfig(), JSON_PRETTY_PRINT) }},
+                instanceConfig: {{ json_encode($instanceConfig) }},
                 locale: '{{ $locale }}',
                 events: {{ json_encode($events) }},
                 resources: {{ json_encode($resources) }},

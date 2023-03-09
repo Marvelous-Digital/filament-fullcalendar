@@ -15,6 +15,7 @@ export default (Alpine) => {
         ({
             key,
             config,
+            instanceConfig,
             locale,
             events,
             resources,
@@ -37,6 +38,7 @@ export default (Alpine) => {
                     this.calendar = new Calendar(this.$refs.calendar, {
                         plugins: [dayGridPlugin, timeGridPlugin, listPlugin, resourceTimelinePlugin, interactionPlugin, momentPlugin, momentTimezonePlugin, resourceTimeGridPlugin],
                         ...config,
+                        ...instanceConfig,
                         locales,
                         locale,
                         eventClick: handleEventClickUsing,
