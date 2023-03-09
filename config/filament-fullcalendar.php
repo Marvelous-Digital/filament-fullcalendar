@@ -30,17 +30,6 @@ return [
         ],
     ],
 
-    'resources' => [
-        [
-            'id' => 1,
-            'title' => 'resource 1'
-        ],
-        [
-            'id' => 2,
-            'title' => 'resource 2'
-        ]
-    ],
-
     'navLinks' => true,
 
     'editable' => true,
