@@ -10,6 +10,7 @@
                 config: {{ json_encode($this->getConfig(), JSON_PRETTY_PRINT) }},
                 locale: '{{ $locale }}',
                 events: {{ json_encode($events) }},
+                resources: {{ json_encode($resources) }},
                 initialView: @js($this->config('initialView')),
                 initialDate: @js($this->config('initialDate')),
                 shouldSaveState: @js($this->config('saveState', false)),
