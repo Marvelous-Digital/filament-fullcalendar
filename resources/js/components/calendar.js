@@ -47,7 +47,7 @@ export default (Alpine) => {
                         eventResize: handleEventResizeUsing,
                         dateClick: handleDateClickUsing,
                         select: handleSelectUsing,
-                        eventContent: (arg) => { html: eventInnerHtml },
+                        eventContent: { html: eventInnerHtml },
                         eventSources: [
                             { events },
                             fetchEventsUsing
