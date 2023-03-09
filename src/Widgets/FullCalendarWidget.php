@@ -36,6 +36,7 @@ class FullCalendarWidget extends Widget implements HasForms
         return view(static::$view)
             ->with([
                 'events' => $this->getViewData(),
+                'resources' => $this->getResources(),
             ]);
     }
 
